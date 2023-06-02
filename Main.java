@@ -4,7 +4,14 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         while(true) {
-            Scanner input = new Scanner(System.in);
+            Scanner input;
+            try {
+                input = new Scanner(System.in);
+            }
+            catch (IllegalArgumentException i) {
+                System.out.println("Please enter a valid input");
+                continue;
+            }
 
             System.out.print("Enter R1: ");
             double r1 = input.nextDouble();
