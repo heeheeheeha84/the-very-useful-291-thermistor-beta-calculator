@@ -15,7 +15,7 @@ public class Main {
             System.out.print("Enter T2: ");
             double t2 = input.nextDouble();
 
-            double beta = Math.log(r1/r2) / (1/t1 - 1/t2);
+            double beta = Math.log(r1/r2) / (1/(t1 + 273.15) - 1/(t2 + 273.15));
             System.out.println(beta);
         }
     }
